@@ -1,4 +1,4 @@
-<?php namespace Ccovey\LdapAuth;
+<?php namespace TwinLakes\LdapAuth;
 
 use adLDAP;
 use Illuminate\Contracts\Auth\UserProvider;

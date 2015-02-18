@@ -1,10 +1,10 @@
 <?php
-use Ccovey\LdapAuth;
+use TwinLakes\LdapAuth;
 use adLDAP\adLDAP;
 use Illuminate\Auth;
 
 /**
-* 
+*
 */
 class TestLdapAuthUserProvider extends PHPUnit_Framework_TestCase
 {

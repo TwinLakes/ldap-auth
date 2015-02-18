@@ -1,6 +1,6 @@
 <?php
 
-use Ccovey\LdapAuth;
+use TwinLakes\LdapAuth;
 
 use Mockery as m;
 
@@ -72,7 +72,7 @@ class LdapAuthUserProviderTest extends PHPUnit_Framework_TestCase
 
 		$mock = m::mock('stdClass');
 		$mock->shouldReceive('newQuery')->once()->andReturn($mock);
-		
+
 		$modelMock = m::mock('stdClass');
 		$modelMock->shouldReceive('getAttributes')->once()->andReturn(array('foo' => 'bar'));
 		$modelMock->shouldReceive('fill')->once()->andReturn(['foo' => 'bar', $this->ident]);
@@ -92,8 +92,8 @@ class LdapAuthUserProviderTest extends PHPUnit_Framework_TestCase
 	{
 		$credentials = array('username' => 'ccovey', 'password' => 'password');
 		$this->ad->shouldReceive('authenticate')->once()->andReturn(true);
-		$user = new Ccovey\LdapAuth\LdapAuthUserProvider($this->ad,$this->config);
-		$model = m::mock('Ccovey\LdapAuth\LdapUser');
+		$user = new TwinLakes\LdapAuth\LdapAuthUserProvider($this->ad,$this->config);
+		$model = m::mock('TwinLakes\LdapAuth\LdapUser');
 		$validate = $user->validateCredentials($model, $credentials);
 
 		$this->assertTrue($validate);
@@ -101,7 +101,7 @@ class LdapAuthUserProviderTest extends PHPUnit_Framework_TestCase
 
 	protected function getProvider($conn, $model = null)
 	{
-		return $this->getMock('Ccovey\LdapAuth\LdapAuthUserProvider', 
+		return $this->getMock('TwinLakes\LdapAuth\LdapAuthUserProvider',
 			array('createModel'), array($conn, $this->config, $model));
 	}
 

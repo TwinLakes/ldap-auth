@@ -1,4 +1,4 @@
-<?php namespace Ccovey\LdapAuth;
+<?php namespace TwinLakes\LdapAuth;
 
 use Config;
 use Illuminate\Database\Eloquent\Model;
@@ -27,7 +27,7 @@ class LdapUser extends Model implements UserContract
 		$username = (Config::has('auth.username_field')) ? Config::get('auth.username_field') : 'username';
 		return $this->attributes[$username];
 	}
-    
+
     /**
 	 * Get the password for the user.
 	 *

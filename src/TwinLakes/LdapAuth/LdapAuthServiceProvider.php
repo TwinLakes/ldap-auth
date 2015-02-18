@@ -1,4 +1,4 @@
-<?php namespace Ccovey\LdapAuth;
+<?php namespace TwinLakes\LdapAuth;
 
 use Illuminate\Support\ServiceProvider;
 
