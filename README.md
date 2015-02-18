@@ -6,7 +6,7 @@ Laravel 5 Active Directory LDAP Authentication driver.
 Fork
 ====
 
-This is a fork of strebl's Package, which is a forck of Cody Covey's ldap-auth package. strebl has kindly updated the package to support
+This is a fork of Manuel Strebel's Package, which is a fork of Cody Covey's ldap-auth package. Manuel Strebel has kindly updated the package to support
 Laravel 5. This fork will simply add the ability to authenticated against LDAP without the needed for persistent storage of user accounts in
 a database.
 
